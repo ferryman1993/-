@@ -47,22 +47,22 @@
           <mxGeometry x="695" y="103" width="190" height="85" as="geometry" />
         </mxCell>
         <mxCell id="QS_gzMezKBBXRja1QmdW-10" value="结束" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="1120" y="300" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="uaHWE86fBP5YHGHeMzCt-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QS_gzMezKBBXRja1QmdW-12">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="910" y="345" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uaHWE86fBP5YHGHeMzCt-6" value="6、创建锁失败" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uaHWE86fBP5YHGHeMzCt-5">
-          <mxGeometry x="0.0448" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
+          <mxGeometry x="1120" y="305" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="uaHWE86fBP5YHGHeMzCt-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QS_gzMezKBBXRja1QmdW-12" target="QS_gzMezKBBXRja1QmdW-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="QS_gzMezKBBXRja1QmdW-12" value="4、尝试三次创建redis锁，并设置过期时间（90秒，大多退款订单都会处理完成）" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="uaHWE86fBP5YHGHeMzCt-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="QS_gzMezKBBXRja1QmdW-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1110" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uaHWE86fBP5YHGHeMzCt-27" value="6、创建失败" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uaHWE86fBP5YHGHeMzCt-26">
+          <mxGeometry x="0.0326" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QS_gzMezKBBXRja1QmdW-12" value="4、尝试三次创建redis锁，并设置过期时间为两周" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="730" y="310" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="QS_gzMezKBBXRja1QmdW-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="QS_gzMezKBBXRja1QmdW-27" target="QS_gzMezKBBXRja1QmdW-24" edge="1">
@@ -81,14 +81,14 @@
         <mxCell id="QS_gzMezKBBXRja1QmdW-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QS_gzMezKBBXRja1QmdW-24" target="QS_gzMezKBBXRja1QmdW-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="QS_gzMezKBBXRja1QmdW-24" value="释放redis锁" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="QS_gzMezKBBXRja1QmdW-24" value="9、释放redis锁" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="731.25" y="750" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uaHWE86fBP5YHGHeMzCt-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="QS_gzMezKBBXRja1QmdW-26" target="QS_gzMezKBBXRja1QmdW-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="QS_gzMezKBBXRja1QmdW-26" value="返回支付中" style="rounded=1;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
-          <mxGeometry x="977.5" y="585" width="135" height="75" as="geometry" />
+        <mxCell id="QS_gzMezKBBXRja1QmdW-26" value="10、返回支付中" style="rounded=1;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
+          <mxGeometry x="1017.5" y="593.75" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="QS_gzMezKBBXRja1QmdW-28" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="160" y="117.5" width="30" height="60" as="geometry" />
@@ -123,8 +123,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QS_gzMezKBBXRja1QmdW-27" value="更新退款订单状态" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="731.25" y="592.5" width="118.75" height="60" as="geometry" />
+        <mxCell id="QS_gzMezKBBXRja1QmdW-27" value="8、更新退款订单状态" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="725" y="585" width="130" height="72.5" as="geometry" />
         </mxCell>
         <mxCell id="uaHWE86fBP5YHGHeMzCt-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uaHWE86fBP5YHGHeMzCt-10" target="QS_gzMezKBBXRja1QmdW-24">
           <mxGeometry relative="1" as="geometry" />
@@ -134,16 +134,13 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uaHWE86fBP5YHGHeMzCt-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="uaHWE86fBP5YHGHeMzCt-10" target="QS_gzMezKBBXRja1QmdW-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="uaHWE86fBP5YHGHeMzCt-15" value="不能确认订单状态" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uaHWE86fBP5YHGHeMzCt-14">
-          <mxGeometry x="-0.8025" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+        <mxCell id="uaHWE86fBP5YHGHeMzCt-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uaHWE86fBP5YHGHeMzCt-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1190" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uaHWE86fBP5YHGHeMzCt-10" value="异步通知，退款查询" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="977.5" y="700" width="120" height="40" as="geometry" />
+        <mxCell id="uaHWE86fBP5YHGHeMzCt-10" value="11、异步通知，退款查询" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="710" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="uaHWE86fBP5YHGHeMzCt-22" value="&lt;mark data-mark-visibility=&quot;visible&quot; data-mark-color-type=&quot;1&quot; data-mark-source-type=&quot;3&quot; data-mark-type=&quot;text&quot; data-mark-id=&quot;7324708390838470575&quot; class=&quot;&quot;&gt;&lt;mark data-mark-visibility=&quot;visible&quot; data-mark-color-type=&quot;1&quot; data-mark-source-type=&quot;3&quot; data-mark-type=&quot;text&quot; data-mark-id=&quot;7324708390838470575&quot; class=&quot;&quot;&gt;1、在创建redis锁会尝试三次，如果三次都失败会返回退款失败，请重新发起&lt;/mark&gt;&lt;/mark&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="150" y="310" width="185" height="55" as="geometry" />
@@ -153,6 +150,9 @@
         </mxCell>
         <mxCell id="uaHWE86fBP5YHGHeMzCt-25" value="&lt;mark data-mark-visibility=&quot;visible&quot; data-mark-color-type=&quot;1&quot; data-mark-source-type=&quot;3&quot; data-mark-type=&quot;text&quot; data-mark-id=&quot;w3ahEfMS6Rrec4-Or3b4y&quot; class=&quot;&quot;&gt;3、设置redis锁时长为两周：考虑最长对账最长对账周期，&lt;/mark&gt;&lt;div&gt;&lt;mark data-mark-visibility=&quot;visible&quot; data-mark-color-type=&quot;1&quot; data-mark-source-type=&quot;3&quot; data-mark-type=&quot;text&quot; data-mark-id=&quot;w3ahEfMS6Rrec4-Or3b4y&quot; class=&quot;&quot;&gt;确保对账单来了之后能确认订单状态&lt;/mark&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="140" y="510" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uaHWE86fBP5YHGHeMzCt-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QS_gzMezKBBXRja1QmdW-26" target="uaHWE86fBP5YHGHeMzCt-10">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
